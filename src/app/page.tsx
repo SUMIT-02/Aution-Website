@@ -36,7 +36,7 @@ if(!user) return null;
       <Button type="submit">Post Item </Button>
     </form>
     const items = await db.select().from(bb_item);
-    {items.map((item)=>(
+    {allItems.map((item)=>(
       <div key={item.id}>{item.name}</div>
     ))}
   </main>
