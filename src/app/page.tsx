@@ -10,6 +10,7 @@ import { auth } from "@/auth";
 
 export default async function HomePage() {
   const session =await auth();
+  
 
   const allItems=await database.query.items.findMany();
 if (!session) return null;
@@ -34,6 +35,7 @@ if(!user) return null;
       <Input name="name" placeholder="Name Your Items"/>
       <Button type="submit">Post Item </Button>
     </form>
+    const items = await db.select().from(bb_item);
     {items.map((item)=>(
       <div key={item.id}>{item.name}</div>
     ))}

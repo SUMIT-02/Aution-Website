@@ -112,3 +112,4 @@ export const items = pgTable("bb_item", {
   name: text("name").notNull(),
 
 })
+export type Item = typeof items.$inferSelect;
