@@ -37,6 +37,13 @@ export default async function HomePage() {
     </form>
     {allItems.map((item)=>(
       <div key={item.id}>{item.name}</div>
+
+    //   <Input name="name" placeholder="Name Your Items"/>
+    //   <Button type="submit">Post Item </Button>
+    // </form>
+    // {allItems.map((item)=>(
+    //   <div key={item.id}>{item.name}</div>
+
     ))}
   </main>
  
