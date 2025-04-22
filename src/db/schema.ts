@@ -123,8 +123,10 @@ export const items =pgTable("bb_item",{
   .notNull()
   .references(()=>users.id,{onDelete:"cascade"}),
   name:text("name").notNull(),
+  startingPrice: integer("startingPrice").notNull().default(0),
 
 // export const items = pgTable("bb_item", {
+
 //   id: serial("id").primaryKey(),
 //   userId: text("userId")
 //     .notNull()
