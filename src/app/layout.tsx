@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {Inter as FontSans} from "next/font/google"
-import {cn} from "@/lib/utils"
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
 import { Header } from "./header";
 
 const fontSans = FontSans({
-  subsets:["latin"],
-  variable:"--font-sans",
-})
- 
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -39,9 +39,9 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Header/>
+        <Header />
         {children}
       </body>
     </html>
-  ); 
+  );
 }
