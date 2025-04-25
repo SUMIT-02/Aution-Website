@@ -1,7 +1,6 @@
-
 // import { signIn } from "@/auth"
 // import { Button } from "./ui/button"
- 
+
 // export default function SignIn() {
 //   return (
 //     <form
@@ -13,7 +12,7 @@
 //       <Button type="submit">Signin with Google </Button>
 //     </form>
 //   )
-// } 
+// }
 
 import { signIn } from "@/auth";
 import { Button } from "@/components/ui/button";
