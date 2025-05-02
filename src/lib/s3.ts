@@ -17,7 +17,7 @@ const s3Client = new S3Client({
   },
 });
 
-export async function getSignedUrlfors3Object(key: string) {
+export async function getSignedUrlforS3Object(key: string) {
   return await getSignedUrl(
     s3Client,
     new PutObjectCommand({ Bucket: env.BUCKET_NAME, Key: key }),
