@@ -104,34 +104,13 @@ export const bids = pgTable("bb_bids", {
   id: serial("id").primaryKey(),
 });
 
-// export const items = pgTable("bb_item", {
-//   id: serial("id").primaryKey(),
-//   userId: text("userId")
-//     .notNull()
-//     .references(() => users.id, { onDelete: "cascade" }),
-//   name: text("name").notNull(),
-
-// })
-// export type Item = typeof items.$inferSelect;
-
 export const items = pgTable("bb_item", {
   id: serial("id").primaryKey(),
   userId: text("userId")
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),
   name: text("name").notNull(),
+  fileKey: text("fileKey").notNull(),
   startingPrice: integer("startingPrice").notNull().default(0),
-
-  // export const items = pgTable("bb_item", {
-
-  //   id: serial("id").primaryKey(),
-  //   userId: text("userId")
-  //     .notNull()
-  //     .references(() => users.id, { onDelete: "cascade" }),
-  //   name: text("name").notNull(),
-  //   fileKey: text("fileKey").notNull(),
-  //   currentBid: integer("currentBid").notNull().default(0),
-  //   startingPrice: integer("startingPrice").notNull().default(0),
-  //   bidInterval: integer("bidInterval").notNull().default(100),
-  //   endDate: timestamp("endDate", { mode: "date" }).notNull(),
 });
+export type Item = typeof items.$inferSelect;
