@@ -14,15 +14,22 @@ export async function Header() {
             href="/"
             className="font-bold hover:underline flex items-center gap-1 "
           >
-            {/* <Image src="/logo.png" width="50" height="50" alt="Logo"/> */}
+            <Image src="/logo.png" width="80" height="80" alt="Logo" />
             Bigbuddy.com
           </Link>
-          <div>
+          <div className="flex items-center gap-8">
             <Link
               href="/items/create"
               className="font-bold hover:underline flex items-center gap-1"
             >
-              Auction Item
+              All Auction
+            </Link>
+
+            <Link
+              href="/items/create"
+              className="font-bold hover:underline flex items-center gap-1"
+            >
+              Create Auction
             </Link>
 
             <Link
