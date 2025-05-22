@@ -6,6 +6,7 @@ import {
 } from "@/app/items/create/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { error } from "console";
 
 export default function CreatePage() {
   return (
@@ -20,11 +21,13 @@ export default function CreatePage() {
           const file = formData.get("file") as File;
 
           const uploadUrl = await createUploadUrlAction(file.name, file.type);
+          console.log(uploadUrl);
 
-          await fetch(uploadUrl, {
+          fetch(uploadUrl, {
             method: "PUT",
             body: file,
-          });
+          }).catch((error) => console.log(error));
+          console.log();
 
           const name = formData.get("name") as string;
           const startingPrice = parseInt(
